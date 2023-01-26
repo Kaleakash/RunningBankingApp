@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Transaction } from './transaction';
-
+import {environment} from '../environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
 export class TransactionService {
-  baseUrl:string ="http://express-api:3000/api/transaction"
+  baseUrl:string =`http://${environment.baseIP}:3000/api/transaction`
   constructor(public http:HttpClient) { }
 
   storeTransactionDetails(transaction:any):Observable<Transaction> {

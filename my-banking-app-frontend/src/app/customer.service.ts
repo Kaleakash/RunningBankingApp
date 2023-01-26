@@ -2,13 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Customer } from './customer';
-
+import {environment} from '../environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
 
-  baseUrl:string ="http://express-api:3000/api/customer"
+  baseUrl:string =`http://${environment.baseIP}:3000/api/customer`
   constructor(public http:HttpClient) { }
 
   createAccount(customer:any):Observable<any> {

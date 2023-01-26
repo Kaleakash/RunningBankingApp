@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs'
 import { Login } from './login';
-
+import {environment} from '../environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  baseUrl:string="http://express-api:3000/api/admin";
+  baseUrl:string=`http://${environment.baseIP}:3000/api/admin`;
   constructor(public http:HttpClient) { }
 
 
