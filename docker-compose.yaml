@@ -12,6 +12,7 @@ services:
     build: ./my-banking-app-backend 
     ports:
       - "3000:3000" 
+    container_name: express-api
     links:
       - database
 

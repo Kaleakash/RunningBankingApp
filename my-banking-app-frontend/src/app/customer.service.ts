@@ -8,7 +8,7 @@ import { Customer } from './customer';
 })
 export class CustomerService {
 
-  baseUrl:string ="http://localhost:3000/api/customer"
+  baseUrl:string ="http://express-api:3000/api/customer"
   constructor(public http:HttpClient) { }
 
   createAccount(customer:any):Observable<any> {

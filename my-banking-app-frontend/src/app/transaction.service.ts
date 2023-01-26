@@ -7,7 +7,7 @@ import { Transaction } from './transaction';
   providedIn: 'root'
 })
 export class TransactionService {
-  baseUrl:string ="http://localhost:3000/api/transaction"
+  baseUrl:string ="http://express-api:3000/api/transaction"
   constructor(public http:HttpClient) { }
 
   storeTransactionDetails(transaction:any):Observable<Transaction> {

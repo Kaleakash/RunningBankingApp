@@ -7,7 +7,7 @@ import { Login } from './login';
   providedIn: 'root'
 })
 export class LoginService {
-  baseUrl:string="http://localhost:3000/api/admin";
+  baseUrl:string="http://express-api:3000/api/admin";
   constructor(public http:HttpClient) { }
 
 
