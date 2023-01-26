@@ -26,4 +26,4 @@ FROM nginx:1.19.2-alpine
 # Copy dist content to html nginx folder, config nginx to point in index.html
 COPY --from=node /usr/src/app/dist/my-banking-app-frontned /usr/share/nginx/html
 
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf    
+#COPY ./nginx.conf /etc/nginx/conf.d/default.conf    
