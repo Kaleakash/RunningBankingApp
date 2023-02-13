@@ -1,2 +1,2 @@
 FROM nginx
-COPY ./my-banking-app-frontend/dist/my-banking-app-frontend/ /usr/share/nginx/html
+COPY /dist/my-banking-app-frontned/ /usr/share/nginx/html
