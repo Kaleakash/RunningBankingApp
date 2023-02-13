@@ -3,13 +3,16 @@ version: '3'
 # Define the services/containers to be run
 services:
   angular: 
-    hostname: localhost
-    build: ./my-banking-app-frontend
+    build:
+      context: ./my-banking-app-frontend/
+      dockerfile: Dockerfile
     ports:
-      - "80:80" 
+      - "81:80" 
   
   express: 
-    build: ./my-banking-app-backend 
+    build:
+      context: ./my-banking-app-backend/
+      dockerfile: Dockerfile
     ports:
       - "3000:3000" 
     container_name: express-api
