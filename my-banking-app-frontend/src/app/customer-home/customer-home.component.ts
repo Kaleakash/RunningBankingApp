@@ -65,6 +65,7 @@ export class CustomerHomeComponent implements OnInit {
       window.location.reload();
       window.scrollTo(0,0);
     })
+    //this.router.navigateByUrl("/home");
   }
   findCustomer(){
     this.cs.findCustomer(this.customer.id).subscribe({

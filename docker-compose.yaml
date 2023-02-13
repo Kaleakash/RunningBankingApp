@@ -7,8 +7,14 @@ services:
       context: ./my-banking-app-frontend/
       dockerfile: Dockerfile
     ports:
-      - "81:80" 
-  
+      - "80:80" 
+    container_name: angular
+    environment:
+      - WATCHPACK_POLLING=true
+    volumes:
+      - data-volume:/var/lib/a
+    depends_on:
+      - express
   express: 
     build:
       context: ./my-banking-app-backend/
@@ -18,8 +24,11 @@ services:
     container_name: express-api
     links:
       - database
-
+    volumes:
+      - data-volume:/var/lib/b
   database: 
     image: mongo 
     ports:
       - "27017:27017"   
+volumes:
+  data-volume:  

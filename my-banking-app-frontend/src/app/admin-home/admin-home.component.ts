@@ -64,6 +64,7 @@ export class AdminHomeComponent implements OnInit {
       window.location.reload();
       window.scrollTo(0,0);
     })
+   // this.router.navigateByUrl("/home");
   }
 
   findAllCustomerDetails() {
