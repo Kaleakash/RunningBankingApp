@@ -14,12 +14,11 @@ pipeline {
                 sh 'docker-compose up --build -d'
             }
         }
-        stage('verify running images and container') {
+        stage('Check all software version') {
             steps {
-                sh 'docker images'
-            }
-            steps {
-                sh 'docker ps'
+                sh 'git --version'
+                sh 'docker --version'
+                sh 'docker-compose --version'
             }
         }
     }
