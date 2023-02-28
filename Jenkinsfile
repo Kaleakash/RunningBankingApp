@@ -13,8 +13,12 @@ pipeline {
             steps {
                 sh 'docker-compose up --build -d'
                 sh 'docker images'
+            } 
+        }
+        stage("verfiy running images") {
+            steps{
+                sh 'docker images'
             }
-            
         }
     }
 }
