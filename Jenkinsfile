@@ -15,9 +15,12 @@ pipeline {
                 sh 'docker images'
             } 
         }
-        stage("verfiy running images") {
+        stage("verfiy running images and containers") {
             steps{
                 sh 'docker images'
+            }
+            steps{
+                sh 'docker ps'
             }
         }
     }
