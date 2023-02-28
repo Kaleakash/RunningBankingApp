@@ -14,12 +14,6 @@ pipeline {
                 sh 'docker-compose up --build -d'
             }
         }
-        stage('Check all software version') {
-            steps {
-                sh 'git --version'
-                sh 'docker --version'
-                sh 'docker-compose --version'
-            }
-        }
+        
     }
 }
