@@ -14,13 +14,6 @@ pipeline {
                 sh 'docker-compose up --build -d'
             }
         }
-        stage('Verify all images and runnig container') {
-            steps {
-                sh 'docker images'
-            }
-            steps {
-                sh 'docker ps'
-            }
-        }
+
     }
 }
