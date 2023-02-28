@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseIP:"localhost"
+  baseIP:"3.235.130.168"
 };
