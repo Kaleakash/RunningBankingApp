@@ -19,9 +19,7 @@ pipeline {
             steps{
                 sh 'docker images'
             }
-            steps{
-                sh 'docker ps'
-            }
+
         }
     }
 }
